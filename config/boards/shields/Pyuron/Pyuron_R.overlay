@@ -44,17 +44,6 @@
     device = <&trackball_R>;
 };
 
-/ {
-    auto_mouse {
-        compatible = "zmk,behavior-auto-mouse";
-        label = "AUTO_MOUSE";
-        #binding-cells = <0>;
-        bindings = <&mo 6>;
-        layers = <6>;
-        delay-ms = <0>;
-        timeout-ms = <1000>;
-    };
-};
 
 &spi0 {
     status = "okay";
