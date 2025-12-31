@@ -44,7 +44,7 @@
     device = <&trackball_R>;
     input-processors = 
         <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
-        <&zip_temp_layer 6 10000>;
+        <&zip_temp_layer 6 750>;
 };
 
 
