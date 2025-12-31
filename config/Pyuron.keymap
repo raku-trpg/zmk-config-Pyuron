@@ -34,6 +34,14 @@
 
 / {
     behaviors {
+        auto_mouse: auto_mouse {
+            compatible = "zmk,behavior-auto-mouse";
+            #binding-cells = <0>;
+            bindings = <&mo MOUSE>;
+            layers = <MOUSE>;
+            delay-ms = <0>;
+            timeout-ms = <1000>;
+        };
     };
 
     keymap {
