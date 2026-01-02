@@ -66,7 +66,7 @@
 &kp Q  &kp L  &kp U      &kp COMMA     &kp PERIOD     &kp F               &kp W                 &kp R        &kp Y            &kp P
 &kp E  &kp I  &kp A      &kp O         &kp MINUS      &kp K               &kp T                 &kp N        &kp S            &kp H
 &kp Z  &kp X  &kp C      &kp V         &kp SEMICOLON  &kp LS(CAPS)        &mt RIGHT_ALT DELETE  &kp G        &kp D            &kp M
-&kp J  &kp B  &kp LCTRL  &kp LEFT_WIN  &lt 1 SPACE    &mt LEFT_SHIFT TAB  &lt 3 BACKSPACE       &lt 2 ENTER  &lt 4 RIGHT_ALT  &kp RIGHT_CONTROL
+&kp J  &kp B  &kp LCTRL  &kp LEFT_WIN  &lt 1 SPACE    &mt LEFT_SHIFT TAB  &lt 3 BACKSPACE       &lt 2 ENTER  &lt 4 RIGHT_ALT  &kp LS(RIGHT_CONTROL)
             >;
         };
 
@@ -90,10 +90,10 @@
 
         layer_3 {
             bindings = <
-&kp ESCAPE       &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans   &kp ESC      &kp HOME  &kp UP_ARROW    &kp END            &kp PRINTSCREEN
-&kp HOME         &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &kp C_SLEEP  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT          &trans
-&kp LEFT_SHIFT   &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans       &trans    &trans          &kp C_VOLUME_DOWN  &kp K_MUTE
-&kp C_VOLUME_UP  &trans                  &trans          &trans                   &trans   &trans       &trans    &trans          &trans             &trans
+&trans           &trans        &trans   &trans          &trans  &kp ESC  &kp HOME  &kp UP_ARROW    &kp END            &kp PRINTSCREEN
+&trans           &kp LEFT_ALT  &kp TAB  &kp LA(ESCAPE)  &trans  &trans   &kp LEFT  &kp DOWN_ARROW  &kp RIGHT          &trans
+&trans           &trans        &trans   &trans          &trans  &trans   &trans    &trans          &kp C_VOLUME_DOWN  &kp C_MUTE
+&kp C_VOLUME_UP  &trans        &trans   &trans          &trans  &trans   &trans    &trans          &trans             &trans
             >;
         };
 
