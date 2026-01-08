@@ -45,6 +45,7 @@
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+    wakeup-source;
 
     trackball_L: trackball_L@0 {
         status = "okay";
@@ -52,6 +53,5 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        wakeup-source;
     };
 };
