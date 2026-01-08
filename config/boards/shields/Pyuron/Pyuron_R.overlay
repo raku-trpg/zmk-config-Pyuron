@@ -1,4 +1,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include "Pyuron.dtsi"
 
 &default_transform {
@@ -11,6 +14,7 @@
                 <&xiao_d 8 GPIO_ACTIVE_HIGH>,
                 <&xiao_d 7 GPIO_ACTIVE_HIGH>,
                 <&gpio0 10 GPIO_ACTIVE_HIGH>;
+    wakeup-source;
 };
 
 &pinctrl {
@@ -39,7 +43,11 @@
 &trackball_listener_R {
     status = "okay";
     device = <&trackball_R>;
+    input-processors = 
+        <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)>,
+        <&zip_temp_layer 6 1000>;
 };
+
 
 &spi0 {
     status = "okay";
@@ -51,14 +59,10 @@
 
     trackball_R: trackball_R@0 {
         status = "okay";
-        compatible = "pixart,pmw3610-alt";
+        compatible = "pixart,paw3222";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        cpi = <400>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        force-awake;
+        wakeup-source;
     };
 };
